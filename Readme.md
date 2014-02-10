@@ -9,4 +9,4 @@ In the case of Ubuntu Linux 13.10, I place this tool in /usr/local/bin/.
 
 To use it, simply type
 
-''' leo "ein paar schwierige Wörter" '''
+	leo "ein paar schwierige Wörter" 
