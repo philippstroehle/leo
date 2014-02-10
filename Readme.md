@@ -6,3 +6,7 @@ This utility (which is in fact a little python script) lets the user search for 
 To run this script conveniently from the command line, place it on your $PATH.
 
 In the case of Ubuntu Linux 13.10, I place this tool in /usr/local/bin/.
+
+To use it, simply type
+
+''' leo "ein paar schwierige Wörter" '''
