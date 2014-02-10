@@ -9,13 +9,15 @@ import getopt
 import easygui as eg
 
 import urllib
+import subprocess
 
 def process(arg):
     try:
         _search_term = urllib.quote(arg)
-        os.system("google-chrome --app http://dict.leo.org/ende/index_en.html#/search=%s&searchLoc=0&resultOrder=basic&multiwordShowSingle=on"%_search_term)
-    except Exception:
-        print "There was an exception"
+        os.system("nohup google-chrome --app http://dict.leo.org/ende/index_en.html#/search=%s&searchLoc=0&resultOrder=basic&multiwordShowSingle=on > /dev/null 2>&1&"%_search_term)
+    except Exception as e:
+        print "There was an exception:"
+        print e
 
 
 
