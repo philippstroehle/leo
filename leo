@@ -8,14 +8,14 @@ import getopt
 
 import easygui as eg
 
-def process(arg):
-    if arg:
-        # os.system("google-chrome --app http://translate.google.com/#de/en/%s"%arg)
-        # os.system("google-chrome --app http://www.dict.cc/?s=%s"%arg)
-        os.system("google-chrome --app http://dict.leo.org/ende?search=%s"%arg)
-#        os.system("google-chrome --app http://www.multitran.ru/c/m.exe?CL=1&s=Essen&l1=3")
-#        http://www.multitran.ru/c/m.exe?CL=1&s=Essen&l1=3
+import urllib
 
+def process(arg):
+    try:
+        _search_term = urllib.quote(arg)
+        os.system("google-chrome --app http://dict.leo.org/ende/index_en.html#/search=%s&searchLoc=0&resultOrder=basic&multiwordShowSingle=on"%_search_term)
+    except Exception:
+        print "There was an exception"
 
 
 
@@ -36,12 +36,13 @@ def main():
             # process arguments
 
     if args:
-        process("%20".join([arg for arg in args])) # process() is defined elsewhere
+        inputs = "".join([arg for arg in args])
+        print inputs
+        process(inputs)# process() is defined elsewhere
     else:
         arg = eg.textbox(msg="Query leo: ", title = "Title", text = "")
         os.system("google-chrome --app http://dict.leo.org/ende?search=%s"%arg)
 
-#    os.system("firefox -new-window http://dict.leo.org/ende?search=spiegel")
 
 if __name__ == "__main__":
     main()
