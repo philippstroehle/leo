@@ -10,3 +10,13 @@ In the case of Ubuntu Linux 13.10, I place this tool in /usr/local/bin/.
 To use it, simply type
 
 	leo "ein paar schwierige Wörter" 
+
+
+== Alternative approaches ==
+http://ubuntuforums.org/showthread.php?t=1087457 to use Google Translate from the command line
+
+
+= Thesaurus =
+This script allows for a quick look up from the command line.
+For easier usability, I have added an alias to my ~/.bashrc:
+	alias the="thesaurus"
