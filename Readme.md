@@ -13,10 +13,12 @@ To use it, simply type
 
 
 == Alternative approaches ==
+
 http://ubuntuforums.org/showthread.php?t=1087457 to use Google Translate from the command line
 
 
 = Thesaurus =
+
 This script allows for a quick look up from the command line.
 For easier usability, I have added an alias to my ~/.bashrc:
 	alias the="thesaurus"
